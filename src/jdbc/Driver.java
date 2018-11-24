@@ -9,15 +9,16 @@ public class Driver {
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Jdwaly", "root", "2635253Ab");
 
 			//Create statment
+			//test
 			Statement myStat = con.createStatement();
-			
+
 			//Execute SQL query
 			ResultSet myRs = myStat.executeQuery("select * from Course");
-			
+
 			while (myRs.next()) {
 				System.out.println(myRs.getString("Name"));
 			}
-			
+
 		}catch (Exception exce) {
 			exce.printStackTrace();
 		}
